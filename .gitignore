@@ -496,3 +496,28 @@ dist/
 *.huge
 *.massive
 
+# Large binary files
+*.bin
+*.dat
+*.dump
+*.backup
+*.bak
+
+# Large media files (already covered above but ensuring)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.flv
+
+# Large data files
+*.db
+*.sqlite
+*.sqlite3
+*.mdb
+
+# Ensure .next is fully ignored
+.next/
+.next/**
+
