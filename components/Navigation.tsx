@@ -46,12 +46,14 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-gray-900">Layers</span>
+          <Link href="/" className="flex items-center group">
+            <span className="text-2xl font-bold text-gray-900 group-hover:text-gray-700 transition-colors">
+              Layers
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -72,17 +74,17 @@ export default function Navigation() {
               {productOpen && (
                 <div
                   ref={productMenuRef}
-                  className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                  className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 animate-scale-in"
                   onMouseEnter={handleProductMouseEnter}
                   onMouseLeave={handleProductMouseLeave}
                 >
-                  <Link href="/plan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Plan</Link>
-                  <Link href="/build" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Build</Link>
-                  <Link href="/insights" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Insights</Link>
-                  <Link href="/customer-requests" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Customer Requests</Link>
-                  <Link href="/ask" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Layers Ask</Link>
-                  <Link href="/security" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Security</Link>
-                  <Link href="/mobile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Mobile</Link>
+                  <Link href="/plan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors rounded mx-1">Plan</Link>
+                  <Link href="/build" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors rounded mx-1">Build</Link>
+                  <Link href="/insights" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors rounded mx-1">Insights</Link>
+                  <Link href="/customer-requests" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors rounded mx-1">Customer Requests</Link>
+                  <Link href="/ask" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors rounded mx-1">Layers Ask</Link>
+                  <Link href="/security" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors rounded mx-1">Security</Link>
+                  <Link href="/mobile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors rounded mx-1">Mobile</Link>
                 </div>
               )}
             </div>
@@ -103,16 +105,16 @@ export default function Navigation() {
               {resourcesOpen && (
                 <div
                   ref={resourcesMenuRef}
-                  className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                  className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 animate-scale-in"
                   onMouseEnter={handleResourcesMouseEnter}
                   onMouseLeave={handleResourcesMouseLeave}
                 >
-                  <Link href="/docs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Documentation</Link>
-                  <Link href="/method" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Method</Link>
-                  <Link href="/integrations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Integrations</Link>
-                  <Link href="/changelog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Changelog</Link>
-                  <Link href="/developers" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Developers</Link>
-                  <Link href="/startup" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Startup</Link>
+                  <Link href="/docs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors rounded mx-1">Documentation</Link>
+                  <Link href="/method" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors rounded mx-1">Method</Link>
+                  <Link href="/integrations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors rounded mx-1">Integrations</Link>
+                  <Link href="/changelog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors rounded mx-1">Changelog</Link>
+                  <Link href="/developers" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors rounded mx-1">Developers</Link>
+                  <Link href="/startup" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors rounded mx-1">Startup</Link>
                 </div>
               )}
             </div>
