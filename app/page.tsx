@@ -287,6 +287,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -401,6 +402,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">

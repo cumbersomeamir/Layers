@@ -57,3 +57,5 @@ export default function ScrollReveal({ children, delay = 0, direction = 'up', cl
   );
 }
 
+
+
